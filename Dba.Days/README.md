@@ -4,7 +4,7 @@ Calcul des jours fériés et des jours ouvrés par mois et année en France.
 
 ## Examples
 
-''' csharp
+``` csharp
  var today = DateTime.Today;
  Console.WriteLine($"Nous sommes le {today}.");
 
@@ -21,4 +21,4 @@ Calcul des jours fériés et des jours ouvrés par mois et année en France.
  {
      Console.WriteLine(item.ToString("D"));
  }
-'''
+```
