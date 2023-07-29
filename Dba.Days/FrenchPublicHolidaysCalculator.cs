@@ -22,7 +22,8 @@ public class FrenchPublicHolidaysCalculator : IPublicHolidaysCalculator
         allDates.Add(easterMonday); // Lundi de Pâques
         allDates.Add(ascensionThursday); // Jeudi de l'Ascension 
         allDates.Add(pentecoteMonday); // Lundi de Pentecôte
-        return allDates;
+
+        return allDates.OrderBy(d => d);
     }
 
     private static MonthDay EasterSunday(int year)

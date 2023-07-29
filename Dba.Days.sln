@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dba.Days.ConsoleTester", "Dba.Days.ConsoleTester\Dba.Days.ConsoleTester.csproj", "{937400C4-599C-4F95-8F7E-00EA2B3706BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,8 +28,15 @@ Global
 		{C9B6EB02-ADBB-4684-B807-B25ABD0DEB00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9B6EB02-ADBB-4684-B807-B25ABD0DEB00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9B6EB02-ADBB-4684-B807-B25ABD0DEB00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{937400C4-599C-4F95-8F7E-00EA2B3706BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{937400C4-599C-4F95-8F7E-00EA2B3706BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{937400C4-599C-4F95-8F7E-00EA2B3706BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{937400C4-599C-4F95-8F7E-00EA2B3706BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CB1936E-7C3E-4E9E-B498-D7CE9477548D}
 	EndGlobalSection
 EndGlobal
