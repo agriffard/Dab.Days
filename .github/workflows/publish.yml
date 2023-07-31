@@ -43,7 +43,7 @@ jobs:
         name: nuget
         if-no-files-found: error
         retention-days: 7
-        path: ${{ env.NuGetDirectory }}/Dabs.Days.nupkg
+        path: ${{ env.NuGetDirectory }}/Dab.Days.nupkg
 
   run_test:
     runs-on: ubuntu-latest
