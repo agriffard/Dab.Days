@@ -2,11 +2,12 @@
 
 Calcul des jours fériés et des jours ouvrés par mois et année en France.
 
-[![publish](https://github.com/agriffard/Dab.Days/actions/workflows/publish.yml/badge.svg)](https://github.com/agriffard/Dab.Days/actions/workflows/publish.yml)
+[![Nuget](https://img.shields.io/nuget/dt/Dab.Days)](https://www.nuget.org/packages/Dab.Days)
 
 ## Examples
 
 https://dotnetfiddle.net/ql8sZW
+
 
 ``` csharp
  var today = DateTime.Today;
