@@ -16,7 +16,7 @@ class Program
             //TestNbWorkingDaysForMonthAndYear();
             //TestHolidaysForYear();
 
-            var today = DateTime.Today;
+            var today = DateTime.Today; // new DateTime(2024, 1, 1);
             Console.WriteLine($"Nous sommes le {today}.");
             Console.WriteLine();
 

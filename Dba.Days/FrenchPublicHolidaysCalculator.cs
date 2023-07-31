@@ -3,14 +3,14 @@ namespace Dba.Days;
 public class FrenchPublicHolidaysCalculator : IPublicHolidaysCalculator
 {
     static readonly MonthDay[] s_fixedPublicHolidays = {
-        new MonthDay(01, 01),
-        new MonthDay(05, 01),
-        new MonthDay(05, 08),
-        new MonthDay(07, 14),
-        new MonthDay(08, 15),
-        new MonthDay(11, 1),
-        new MonthDay(11, 11),
-        new MonthDay(12, 25) };
+        new MonthDay(01, 01), // 1er Janvier
+        new MonthDay(05, 01), // 1er Mai
+        new MonthDay(05, 08), // 8 Mai
+        new MonthDay(07, 14), // 14 Juillet
+        new MonthDay(08, 15), // 15 Août
+        new MonthDay(11, 1), // 1er Novembre
+        new MonthDay(11, 11), // 11 Novembre
+        new MonthDay(12, 25) }; // 25 Décembre
 
     public IEnumerable<DateTime> GetPublicHolidays(int year)
     {
@@ -21,7 +21,7 @@ public class FrenchPublicHolidaysCalculator : IPublicHolidaysCalculator
         var pentecoteMonday = easterSunday.AddDays(50);
         allDates.Add(easterMonday); // Lundi de Pâques
         allDates.Add(ascensionThursday); // Jeudi de l'Ascension 
-        allDates.Add(pentecoteMonday); // Lundi de Pentecôte
+        //allDates.Add(pentecoteMonday); // Lundi de Pentecôte
 
         return allDates.OrderBy(d => d);
     }
