@@ -1,6 +1,6 @@
 using System.Collections.Concurrent;
 
-namespace Dba.Days;
+namespace Dab.Days;
 
 public class WorkingDaysCalculator : IWorkingDaysCalculator
 {

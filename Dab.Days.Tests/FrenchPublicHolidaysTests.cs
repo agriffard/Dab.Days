@@ -1,4 +1,4 @@
-namespace Dba.Days.Tests;
+namespace Dab.Days.Tests;
 
 public class FrenchPublicHolidaysTests
 {

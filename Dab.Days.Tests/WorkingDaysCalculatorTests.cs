@@ -1,6 +1,4 @@
-using FluentAssertions;
-
-namespace Dba.Days.Tests;
+namespace Dab.Days.Tests;
 
 public class WorkingDaysCalculatorTests
 {

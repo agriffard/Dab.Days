@@ -6,6 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Dba.Days\Dba.Days.csproj" />
+    <ProjectReference Include="..\Dab.Days\Dab.Days.csproj" />
   </ItemGroup>
 </Project>

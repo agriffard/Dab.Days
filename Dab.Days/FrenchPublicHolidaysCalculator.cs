@@ -1,4 +1,4 @@
-namespace Dba.Days;
+namespace Dab.Days;
 
 public class FrenchPublicHolidaysCalculator : IPublicHolidaysCalculator
 {
