@@ -1,10 +1,8 @@
-# Dab.Days
+# WorkingDays
 
 Calcul des jours fériés et des jours ouvrés par mois et année en France.
 
 ## Examples
-
-https://dotnetfiddle.net/ql8sZW
 
 ``` csharp
  var today = DateTime.Today;
@@ -23,4 +21,10 @@ https://dotnetfiddle.net/ql8sZW
  {
      Console.WriteLine(item.ToString("D"));
  }
+Console.WriteLine();
+
+var startDate = today;
+var endDate = today.AddYears(1);
+var nbDays = workingDaysCalculator.GetWorkingDaysBetweenDates(startDate, endDate);
+Console.WriteLine($"Il y a {nbDays} jours travaillés en France entre le {startDate.ToShortDateString()} et le {endDate.ToShortDateString()}.");
 ```
