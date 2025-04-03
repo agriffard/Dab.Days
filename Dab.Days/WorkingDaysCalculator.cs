@@ -36,6 +36,28 @@ public class WorkingDaysCalculator : IWorkingDaysCalculator
         return workingDays;
     }
 
+    public int GetWorkingDaysBetweenDates(DateTime startDate, DateTime endDate, bool workingOnSaturday = false)
+    {
+        var workingDays = 0;
+        var currentDay = startDate;
+        var isSameYear = startDate.Year == endDate.Year;
+        var publicHolidays = _publicHolidaysCalculator.GetPublicHolidays(startDate.Year);
+        if (!isSameYear)
+            publicHolidays = publicHolidays.Concat(_publicHolidaysCalculator.GetPublicHolidays(endDate.Year));
+        while (currentDay <= endDate)
+        {
+            //if neither sunday, neither saturday (not working), neither public holiday
+            if (currentDay.DayOfWeek != DayOfWeek.Sunday
+                && currentDay.DayOfWeek != DayOfWeek.Saturday
+                && !workingOnSaturday
+                && !publicHolidays.Any(h => h.Year == currentDay.Year && h.Month == currentDay.Month && h.Day == currentDay.Day))
+                workingDays++;
+            currentDay = currentDay.AddDays(1);
+        }
+
+        return workingDays;
+    }
+
     public virtual bool IsDayOff(DateTime dt)
     {
         var year = dt.Year;
