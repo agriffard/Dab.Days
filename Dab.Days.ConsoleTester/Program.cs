@@ -20,21 +20,30 @@ class Program
             Console.WriteLine($"Nous sommes le {today}.");
             Console.WriteLine();
 
-            var isDayOff = new WorkingDaysCalculator(new FrenchPublicHolidaysCalculator()).IsDayOff(today);
+            var frenchPublicHolidaysCalculator = new FrenchPublicHolidaysCalculator();
+            var workingDaysCalculator = new WorkingDaysCalculator(frenchPublicHolidaysCalculator);
+
+            var isDayOff = workingDaysCalculator.IsDayOff(today);
             var dayOffLabel = isDayOff ? "non " : "";
             Console.WriteLine($"Le {today.ToLongDateString()} est un jour {dayOffLabel}travaillé en France.");
             Console.WriteLine();
 
-            var nbWorkingDays = new WorkingDaysCalculator(new FrenchPublicHolidaysCalculator()).GetWorkingDaysByMonth(today.Year, today.Month);
+            var nbWorkingDays = workingDaysCalculator.GetWorkingDaysByMonth(today.Year, today.Month);
             Console.WriteLine($"Il y a {nbWorkingDays} jour(s) travaillé(s) en {today.ToString("MMMM")} {today.Year}.");
             Console.WriteLine();
 
-            var result = new FrenchPublicHolidaysCalculator().GetPublicHolidays(today.Year);
+            var result = frenchPublicHolidaysCalculator.GetPublicHolidays(today.Year);
             Console.WriteLine($"Il y a {result.Count()} jours fériés en France en {today.Year} :");
             foreach (var item in result)
             {
                 Console.WriteLine(item.ToString("D"));
             }
+            Console.WriteLine();
+
+            var startDate = today; //new DateTime(today.Year, 1, 1);
+            var endDate = today.AddYears(1); //new DateTime(today.Year, 12, 31);
+            var nbDays = workingDaysCalculator.GetWorkingDaysBetweenDates(startDate, endDate);
+            Console.WriteLine($"Il y a {nbDays} jours travaillés en France entre le {startDate.ToShortDateString()} et le {endDate.ToShortDateString()}.");
         }
         catch (Exception e)
         {
